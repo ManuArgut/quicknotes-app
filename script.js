@@ -53,37 +53,37 @@ function getVisibleNotes() {
 }
 
 // The count message for zero, one and many notes
-//function updateCount() {
-  //clearAllBtn.hidden = notes.length === 0;   // no notes, nothing to clear
+function updateCount() {
+  clearAllBtn.hidden = notes.length === 0;   // no notes, nothing to clear
 
-  //if (notes.length === 0) {
-   // noteCount.textContent = "You have no notes yet.";
-  //} else if (notes.length === 1) {
-   // noteCount.textContent = "You have 1 note.";
-  //} else {
-    //noteCount.textContent = `You have ${notes.length} notes.`;
- //}
-//}
+  if (notes.length === 0) {
+    noteCount.textContent = "You have no notes yet.";
+  } else if (notes.length === 1) {
+    noteCount.textContent = "You have 1 note.";
+  } else {
+    noteCount.textContent = `You have ${notes.length} notes.`;
+ }
+}
 
 // Remove the note with the given id, then redraw
-//function deleteNote(id) {
- // notes = notes.filter(function (note) {
-   // return note.id !== id;
-  //});
- // saveNotes();
-  //render();
-//}
+function deleteNote(id) {
+  notes = notes.filter(function (note) {
+    return note.id !== id;
+  });
+  saveNotes();
+  render();
+}
 
 // Check the text; returns an error message, or "" if the text is fine
-//function validate(text) {
- // if (text === "") {
-   // return "Please type a note first.";
- // }
- // if (text.length > 200) {
- //   return "Notes must be 200 characters or fewer.";
-//  }
-  ///return "";
-//}
+function validate(text) {
+  if (text === "") {
+    return "Please type a note first.";
+  }
+  if (text.length > 200) {
+    return "Notes must be 200 characters or fewer.";
+  }
+  return "";
+}
 
 // 3. Rebuild the whole list from the notes array.
 // Only createElement + textContent are used for user text (never innerHTML).

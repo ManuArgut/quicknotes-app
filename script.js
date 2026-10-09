@@ -164,16 +164,16 @@ form.addEventListener("submit", function (event) {
 });
 
 // Bonus: delete every note, but only after the user confirms
-clearAllBtn.addEventListener("click", function () {
-  if (notes.length === 0) {
-    return;   // nothing to delete
-  }
-  if (confirm("Delete all notes?")) {
-    notes = [];
-    saveNotes();
-    render();
-  }
-});
+//clearAllBtn.addEventListener("click", function () {
+  //if (notes.length === 0) {
+   // return;   // nothing to delete
+  //}
+  //if (confirm("Delete all notes?")) {
+  //  notes = [];
+   // saveNotes();
+   //render();
+ //}
+//});
 
 // Hide the error as soon as the user starts fixing the problem
 noteInput.addEventListener("input", function () {
